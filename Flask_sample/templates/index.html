@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>House Price Prediction</h1>
+        <form method="POST">
+            <label for="Area">Area:</label>
+            <input type="number" step="any" name="Area" required>
+
+            <label for="feature2">Bedrooms:</label>
+            <input type="number" step="any" name="feature2" required>
+
+            <label for="feature3">Bathrooms:</label>
+            <input type="number" step="any" name="feature3" required>
+
+            <label for="feature4">Stories:</label>
+            <input type="number" step="any" name="feature4" required>
+
+            <label for="feature4">Mainroad:</label>
+            <input type="number" step="any" name="feature4" required>
+
+            <label for="feature4">Guestroom:</label>
+            <input type="number" step="any" name="feature4" required>
+
+            <label for="feature4">Basement:</label>
+            <input type="number" step="any" name="feature4" required>
+
+            <label for="feature4">Hot warer Heating:</label>
+            <input type="number" step="any" name="feature4" required>
+
+            <label for="feature4">Air conditioning:</label>
+            <input type="number" step="any" name="feature4" required>
+
+            <label for="feature4">Parking:</label>
+            <input type="number" step="any" name="feature4" required>
+
+            <label for="feature4">Pref Area:</label>
+            <input type="number" step="any" name="feature4" required>
+
+            <label for="feature4">Furnishing Status:</label>
+            <input type="number" step="any" name="feature4" required>
+
+
+            <!-- Add additional inputs as needed -->
+
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction %}
+            <div class="result">
+                <h2>Prediction: {{ prediction }}</h2>
+            </div>
+        {% elif error %}
+            <div class="error">
+                <h2>Error: {{ error }}</h2>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
